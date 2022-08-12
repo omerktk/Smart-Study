@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:visibility="visible"
-    tools:context=".TeaRegActivity">
-
+    >
 
     <TextView
         android:id="@+id/signin"
@@ -15,13 +14,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:gravity="center"
-        android:text="Register"
+        android:text="Teacher Register"
         android:textColor="#355C7D"
         android:textSize="35dp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/t_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/signin"
@@ -31,50 +30,35 @@
         android:layout_marginBottom="10dp"
         android:background="#3C355C7D"
         android:drawablePadding="20dp"
-        android:hint="Full Name"
+        android:hint="Your Name"
+        android:inputType="text"
         android:padding="20dp"
         android:textColor="#355C7D"
         android:textColorHint="#355C7D" />
 
+
     <EditText
-        android:id="@+id/age"
+        android:id="@+id/t_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/username"
+        android:layout_below="@id/t_name"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#3C355C7D"
         android:drawablePadding="20dp"
-        android:hint="Phone Number"
+        android:hint="Username"
+        android:inputType="text"
         android:padding="20dp"
         android:textColor="#355C7D"
         android:textColorHint="#355C7D" />
 
     <EditText
-        android:id="@+id/mail"
+        android:id="@+id/t_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/age"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#3C355C7D"
-
-        android:drawablePadding="20dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="20dp"
-        android:textColor="#355C7D"
-        android:textColorHint="#355C7D" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mail"
+        android:layout_below="@id/t_user"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -87,47 +71,32 @@
         android:textColor="#355C7D"
         android:textColorHint="#355C7D" />
 
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/regbtn"
-        android:textColor="@color/white"
+        android:id="@+id/t_regbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
+        android:layout_below="@id/t_pass"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:backgroundTint="#355C7D"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/rounde_btn"
-        android:text="Register" />
-
-
-
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/mail"
-        android:layout_below="@+id/age"
-        android:layout_alignRight="@id/signin"
-        android:layout_marginTop="-36dp"
-        android:layout_marginRight="-49dp"
-        android:layout_marginBottom="-72dp"
-        android:visibility="gone" />
+        android:backgroundTint="#355C7D"
+        android:text="Register"
+        android:textColor="@color/white" />
 
     <TextView
-        android:id="@+id/forgotpass"
+        android:id="@+id/sign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:textSize="21sp"
-        android:textColor="#355C7D"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#355C7D"
-        android:text="MasterMind.org"
+        android:layout_marginTop="510dp"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
-        />
-
+        android:text="Already Have an account"
+        android:textColor="#355C7D"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
