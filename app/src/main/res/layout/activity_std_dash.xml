@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StdDashActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signin"
+        android:text="Std dash"
+        android:textColor="#355C7D"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_margin="50dp"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/play"
+        android:layout_below="@id/signin"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="38dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#355C7D"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:gravity="center"
+
+        android:text="mention on doc image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="38dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#355C7D"
+        android:background="@drawable/rounde_btn"
+        android:text="class days" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sdr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cls"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="38dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#355C7D"
+        android:background="@drawable/rounde_btn"
+        android:text="Study Data" />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="21sp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="38dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#355C7D"
+        android:background="@drawable/rounde_btn"
+        android:text="Logout" />
+
+
+
+
+</RelativeLayout>
