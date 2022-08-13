@@ -24,8 +24,13 @@ import com.google.android.material.button.MaterialButton;
 
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class TeaLoginActivity extends AppCompatActivity {
 
@@ -33,6 +38,7 @@ public class TeaLoginActivity extends AppCompatActivity {
     EditText t_user,t_pass;
     FirebaseAuth mAuth;
     MaterialButton t_login,t_reg_red;
+    String suser,spass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +68,8 @@ public class TeaLoginActivity extends AppCompatActivity {
 
     private void userLogin() {
 
-        String suser = t_user.getText().toString().trim();
-        String spass = t_pass.getText().toString().trim();
+         suser = t_user.getText().toString().trim();
+        spass = t_pass.getText().toString().trim();
 
         if(suser.isEmpty()){
             t_user.setError("Make sure to fill this field");
@@ -91,11 +97,14 @@ public class TeaLoginActivity extends AppCompatActivity {
             return;
         }
 
+
         mAuth.signInWithEmailAndPassword(suser,spass).addOnSuccessListener(TeaLoginActivity.this, new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
-                Toast.makeText(TeaLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
+
+              //  String uid = authResult.getUser().getUid();
+                fetch();
+
             }
         });
 
@@ -106,4 +115,44 @@ public class TeaLoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
+    public void fetch()
+    {
+        //connection String
+        DatabaseReference firebaseDatabase  = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("teacher");
+
+
+
+        firebaseDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot)
+            {
+                //load data from database in class
+                for(DataSnapshot firedata : snapshot.getChildren())
+                {
+                    teacher_data s1 = firedata.getValue(teacher_data.class);
+                    if(s1.t_user.equals(suser))
+                    {
+                        Toast.makeText(TeaLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
+                    } else if(s1.t_user!=suser){
+                        Toast.makeText(TeaLoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                    }
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error)
+            {
+
+
+            }
+        });
+    }
+
 }

@@ -73,24 +73,7 @@
         android:textColor="@color/white"
         android:backgroundTint="#355C7D"
         android:background="@drawable/rounde_btn"
-        android:text="Reg par" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/about3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/about2"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="38dp"
-        android:textColor="@color/white"
-        android:backgroundTint="#355C7D"
-        android:background="@drawable/rounde_btn"
-        android:text="reg Student" />
-
-
-
+        android:text="Reg Student" />
 
 
 
