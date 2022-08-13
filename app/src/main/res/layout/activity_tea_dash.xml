@@ -62,7 +62,7 @@
         android:text="my Student" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/about2"
+        android:id="@+id/regstd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/about"

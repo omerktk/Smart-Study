@@ -24,8 +24,6 @@ public class StdDashActivity extends AppCompatActivity {
         });
 
         //Study Data
-        btn2.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(),StdStudyDataActivity.class));
-        });
+
     }
 }

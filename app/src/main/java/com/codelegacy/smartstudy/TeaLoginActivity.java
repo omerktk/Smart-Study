@@ -137,8 +137,6 @@ public class TeaLoginActivity extends AppCompatActivity {
                     {
                         Toast.makeText(TeaLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
-                    } else if(s1.t_user!=suser){
-                        Toast.makeText(TeaLoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
                     }
 
                 }

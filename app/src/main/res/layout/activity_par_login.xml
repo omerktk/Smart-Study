@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ParLoginActivity">
+    tools:context=".AuthActivity">
 
     <TextView
         android:id="@+id/signin"
@@ -35,7 +35,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/p_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/signin"
@@ -51,10 +51,10 @@
         android:textColorHint="#355C7D" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/p_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/username"
+        android:layout_below="@id/p_username"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -68,45 +68,46 @@
         android:textColorHint="#355C7D" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/p_login"
         android:layout_width="wrap_content"
-        android:textColor="@color/white"
         android:layout_height="wrap_content"
-        android:id="@+id/loginbtn"
-        android:layout_below="@id/password"
-        android:text="LOGIN"
-        android:backgroundTint="#355C7D"
+        android:layout_below="@id/p_password"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#355C7D"
+        android:text="LOGIN"
+        android:textColor="@color/white" />
 
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/p_reg_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/p_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#355C7D"
+        android:text="Register"
+        android:textColor="@color/white" />
 
     <TextView
-
-        android:id="@+id/footer"
+        android:id="@+id/text3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="21dp"
-        android:backgroundTint="#355C7D"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
-        android:text="smartstudy.org"
+        android:text="Don't have an account"
         android:textColor="#355C7D"
-        android:textSize="21sp" />
-
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/loginbtn"
-        android:layout_below="@+id/password"
-        android:layout_marginTop="-18dp"
-        android:layout_marginBottom="-72dp"
-        android:visibility="gone" />
-
-
+        android:textSize="20dp" />
 
 
 
