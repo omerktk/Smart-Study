@@ -6,22 +6,23 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import com.bumptech.glide.Glide;
+
 public class MainActivity extends AppCompatActivity {
 
-    VideoView vv;
+    ImageView splashscreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        vv = findViewById(R.id.videoView);
-
-
-
+        splashscreen = findViewById(R.id.splashscreen);
+        Glide.with(MainActivity.this).load(getDrawable(R.drawable.ab66)).into(splashscreen);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -30,19 +31,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(x);
                 finish();
             }
-        },5000);
-
-        String video_url = "android.resource://" + MainActivity.this.getPackageName()+"/" + R.raw.video;
-        final VideoView videoView = findViewById(R.id.videoView);
-        Uri videoUri = Uri.parse(video_url);
-        MediaController mediaController= new MediaController(MainActivity.this);
-        videoView.setVideoURI(videoUri);
-        //mediaController.setAnchorView(videoView);
-        videoView.setMediaController(mediaController);
-        mediaController.hide();
-
-       // videoView.requestFocus();
-
-        videoView.start();
+        },4500);
     }
 }
