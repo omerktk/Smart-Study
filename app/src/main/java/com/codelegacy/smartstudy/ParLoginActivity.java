@@ -7,11 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,8 +27,9 @@ public class ParLoginActivity extends AppCompatActivity {
     DatabaseReference ref;
     EditText p_username,p_password;
     FirebaseAuth mAuth;
-    MaterialButton p_login,p_reg_red;
+    MaterialCardView p_login;
     String pusername,ppassword;
+    TextView p_reg_red;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,8 @@ public class ParLoginActivity extends AppCompatActivity {
 
         p_username = findViewById(R.id.p_username);
         p_password = findViewById(R.id.p_password);
-        p_login = (MaterialButton) findViewById(R.id.p_login);
-        p_reg_red = (MaterialButton) findViewById(R.id.p_reg_red);
+        p_login = (MaterialCardView) findViewById(R.id.p_login);
+        p_reg_red = (TextView) findViewById(R.id.p_reg_red);
 
         //button 1 login
         p_login.setOnClickListener(view -> {

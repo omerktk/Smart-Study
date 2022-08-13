@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -37,7 +39,8 @@ public class TeaLoginActivity extends AppCompatActivity {
     DatabaseReference ref;
     EditText t_user,t_pass;
     FirebaseAuth mAuth;
-    MaterialButton t_login,t_reg_red;
+    MaterialCardView t_login;
+    TextView t_reg_red;
     String suser,spass;
 
     @Override
@@ -49,8 +52,8 @@ public class TeaLoginActivity extends AppCompatActivity {
 
         t_user = findViewById(R.id.t_user);
         t_pass = findViewById(R.id.t_pass);
-        t_login = (MaterialButton) findViewById(R.id.t_login);
-        t_reg_red = (MaterialButton) findViewById(R.id.t_reg_red);
+        t_login = (MaterialCardView) findViewById(R.id.t_login);
+        t_reg_red = findViewById(R.id.t_reg_red);
 
         //button 1 login
         t_login.setOnClickListener(view -> {

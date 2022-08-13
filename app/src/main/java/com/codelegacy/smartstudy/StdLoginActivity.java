@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,7 +26,7 @@ public class StdLoginActivity extends AppCompatActivity {
     DatabaseReference ref;
     EditText s_user,s_pass;
     FirebaseAuth mAuth;
-    MaterialButton slogin;
+    MaterialCardView slogin;
     String susername,spassword;
 
 
@@ -33,18 +34,12 @@ public class StdLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_std_login);
-        slogin = (MaterialButton) findViewById(R.id.s_login);
-
-        slogin.setOnClickListener(view -> {
-            Toast.makeText(StdLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(getApplicationContext(),StdDashActivity.class));
-        });
 
         mAuth = FirebaseAuth.getInstance();
 
         s_user = findViewById(R.id.s_username);
         s_pass = findViewById(R.id.s_password);
-        slogin = (MaterialButton) findViewById(R.id.s_login);
+        slogin = (MaterialCardView) findViewById(R.id.s_login);
 
         //button 1 login
         slogin.setOnClickListener(view -> {

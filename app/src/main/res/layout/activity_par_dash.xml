@@ -1,21 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/forgif"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ParDashActivity">
+    tools:context=".ParDashActivity"
+    android:orientation="vertical"
+    >
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Parent Dashboard"-->
+    <!--        android:fontFamily="sans-serif-condensed"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:gravity="center"-->
+    <!--        android:textSize="50dp"-->
+    <!--        android:layout_marginTop="80dp"-->
+    <!--        android:textStyle="bold|italic"-->
+    <!--        android:textColor="#fff"-->
+    <!--        />-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardgif"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="-10dp"
+        android:scaleType="centerCrop" >
+        <ImageView
+            android:id="@+id/gif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="104dp"
-        android:text="parent dash data like the doc"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parent Dashboard"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="50dp"
+            android:textStyle="bold|italic"
+            android:textColor="#fff"
+            />
 
+    </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/namecard"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:layout_marginTop="-50dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#D2DDF1"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="search your child"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"
+            android:textColor="#0D0F35"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-350dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E9F0FB"
+                android:hint="Your Child`s Enroll NO"
+                android:paddingLeft="10dp"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-250dp"
+            android:backgroundTint="#0D0F35"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Search"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
+

@@ -3,14 +3,17 @@ package com.codelegacy.smartstudy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -24,12 +27,19 @@ public class TeaRegActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tea_reg);
         mAuth = FirebaseAuth.getInstance();
         EditText tname, tuser, tpass;
-        Button t_reg;
+        MaterialCardView t_reg;
+        TextView btn_reg;
 
         tname = findViewById(R.id.t_name);
         tuser = findViewById(R.id.t_user);
         tpass = findViewById(R.id.t_pass);
         t_reg = findViewById(R.id.t_regbtn);
+        btn_reg = findViewById(R.id.btn_reg);
+
+        btn_reg.setOnClickListener(view -> {
+            Intent reg = new Intent(TeaRegActivity.this,TeaLoginActivity.class);
+            startActivity(reg);
+        });
 
         t_reg.setOnClickListener(view->{
             String suser = tuser.getText().toString().trim();

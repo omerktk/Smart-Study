@@ -1,114 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".AuthActivity">
+    tools:context=".login"
+    android:background="#E9F0FB"
+    android:orientation="vertical"
+    >
 
-    <TextView
-        android:id="@+id/signin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:textSize="30sp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="Login Form"-->
+    <!--        android:textColor="#0D0F35"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:fontFamily="sans-serif-black"-->
+    <!--        />-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/teacher_login"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:text="Teacher Login"
-        android:textColor="#355C7D"
-        android:textSize="35dp"
-        android:textStyle="bold" />
+        />
 
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:text="Login Here"
-        android:textColor="#355C7D"
-        android:textSize="20dp" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/emailcard"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        >
 
-    <EditText
-        android:id="@+id/t_user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/signin"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#3C355C7D"
-        android:drawablePadding="20dp"
-        android:hint="Email"
-        android:padding="20dp"
-        android:textColor="#355C7D"
-        android:textColorHint="#355C7D" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Email Address"
+            android:textColor="#0D0F35"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            />
 
-    <EditText
-        android:id="@+id/t_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/t_user"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#3C355C7D"
-        android:drawablePadding="20dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="20dp"
-        android:textColor="#355C7D"
-        android:textColorHint="#355C7D" />
+        <EditText
+            android:id="@+id/t_user"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#FFF"
+            android:drawableLeft="@drawable/icon_mail"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint=""
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <com.google.android.material.button.MaterialButton
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/passwordcard"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="25dp"
+        app:cardElevation="10dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Password"
+            android:textColor="#0D0F35"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            />
+
+        <EditText
+            android:id="@+id/t_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#FFF"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint=""
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/t_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/t_pass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#355C7D"
-        android:text="LOGIN"
-        android:textColor="@color/white" />
-
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/t_reg_red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/t_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#355C7D"
-        android:text="Register"
-        android:textColor="@color/white" />
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="30dp"
+        android:background="#5B628F"
+        android:backgroundTint="#5B628F">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="LOGIN"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            ></TextView>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:id="@+id/text3"
+        android:id="@+id/t_reg_red"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:text="Don`t have an account? Register"
+        android:layout_marginTop="15dp"
         android:gravity="center"
-        android:text="Don't have an account"
-        android:textColor="#355C7D"
-        android:textSize="20dp" />
+        android:textSize="13dp"
+        />
 
 
-
-</RelativeLayout>
+</LinearLayout>

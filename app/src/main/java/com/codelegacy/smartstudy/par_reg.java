@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -26,7 +27,7 @@ public class par_reg extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         EditText pname, puser, ppass;
-        Button p_reg;
+        MaterialCardView p_reg;
 
         pname = findViewById(R.id.p_name);
         puser = findViewById(R.id.p_user);
