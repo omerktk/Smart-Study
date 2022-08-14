@@ -122,6 +122,8 @@ public class TeaLoginActivity extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(TeaLoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
                 pd.hide();
+                t_user.setText("");
+                t_pass.setText("");
             }
         });
     }
@@ -148,6 +150,8 @@ public class TeaLoginActivity extends AppCompatActivity {
                         Toast.makeText(TeaLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
                         pd.hide();
+                        t_user.setText("");
+                        t_pass.setText("");
                     }
 
                 }

@@ -8,11 +8,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class TeaStudyDataUpload extends AppCompatActivity {
-    MaterialButton btn;
+    MaterialCardView btn;
     ProgressDialog pd;
     DatabaseReference ref = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("StudyData");
 
@@ -22,7 +23,7 @@ public class TeaStudyDataUpload extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teastudydataupload);
 
-        btn = (MaterialButton) findViewById(R.id.btnUpload);
+        btn = (MaterialCardView) findViewById(R.id.btnUpload);
 
 
         //button Upload Image

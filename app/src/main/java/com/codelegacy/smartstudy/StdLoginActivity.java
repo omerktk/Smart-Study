@@ -3,6 +3,7 @@ package com.codelegacy.smartstudy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -28,6 +29,7 @@ public class StdLoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     MaterialCardView slogin;
     String susername,spassword;
+    ProgressDialog pd;
 
 
     @Override
@@ -35,6 +37,8 @@ public class StdLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_std_login);
 
+        pd = new ProgressDialog(this);
+        pd.setTitle("Please Wait...");
         mAuth = FirebaseAuth.getInstance();
 
         s_user = findViewById(R.id.s_username);
@@ -44,6 +48,8 @@ public class StdLoginActivity extends AppCompatActivity {
         //button 1 login
         slogin.setOnClickListener(view -> {
             userLogin();
+
+            pd.show();
         });
     }
 
@@ -84,7 +90,7 @@ public class StdLoginActivity extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
 
                 //  String uid = authResult.getUser().getUid();
-                //fetch();
+                fetch();
 
             }
         });
@@ -93,6 +99,9 @@ public class StdLoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(StdLoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                pd.hide();
+                s_user.setText("");
+                s_pass.setText("");
             }
         });
     }
@@ -111,13 +120,14 @@ public class StdLoginActivity extends AppCompatActivity {
                 //load data from database in class
                 for(DataSnapshot firedata : snapshot.getChildren())
                 {
-                    teacher_data s1 = firedata.getValue(teacher_data.class);
-                    if(s1.t_user.equals(susername))
+                    Student s1 = firedata.getValue(Student.class);
+                    if(s1.semail.equals(susername))
                     {
                         Toast.makeText(StdLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
-                    } else if(s1.t_user!=susername){
-                        Toast.makeText(StdLoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(getApplicationContext(),StdDashActivity.class));
+                        pd.hide();
+                        s_user.setText("");
+                        s_pass.setText("");
                     }
 
                 }
