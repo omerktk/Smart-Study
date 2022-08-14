@@ -20,7 +20,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/play"
+        android:id="@+id/sdata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/signin"
@@ -34,38 +34,38 @@
         android:text="Study data" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/high"
+        android:id="@+id/upsdata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/play"
+        android:layout_below="@id/sdata"
         android:layout_marginStart="80dp"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="38dp"
-        android:textColor="@color/white"
-        android:backgroundTint="#355C7D"
         android:background="@drawable/rounde_btn"
-        android:text="Class Days" />
+        android:backgroundTint="#355C7D"
+        android:text="Upload Study Data"
+        android:textColor="@color/white" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/about"
+        android:id="@+id/mystd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/high"
+        android:layout_below="@id/upsdata"
         android:layout_marginStart="80dp"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="38dp"
-        android:textColor="@color/white"
-        android:backgroundTint="#355C7D"
         android:background="@drawable/rounde_btn"
-        android:text="my Student" />
+        android:backgroundTint="#355C7D"
+        android:text="my Student"
+        android:textColor="@color/white" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/regstd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/about"
+        android:layout_below="@id/mystd"
         android:layout_marginStart="80dp"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="80dp"

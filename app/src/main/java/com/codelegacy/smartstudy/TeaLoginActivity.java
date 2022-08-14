@@ -2,6 +2,7 @@ package com.codelegacy.smartstudy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -42,6 +43,7 @@ public class TeaLoginActivity extends AppCompatActivity {
     MaterialCardView t_login;
     TextView t_reg_red;
     String suser,spass;
+    ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +101,9 @@ public class TeaLoginActivity extends AppCompatActivity {
             t_pass.requestFocus();
             return;
         }
+        pd = new ProgressDialog(this);
+        pd.setTitle("Please Wait...");
+        pd.show();
 
 
         mAuth.signInWithEmailAndPassword(suser,spass).addOnSuccessListener(TeaLoginActivity.this, new OnSuccessListener<AuthResult>() {
@@ -108,6 +113,7 @@ public class TeaLoginActivity extends AppCompatActivity {
               //  String uid = authResult.getUser().getUid();
                 fetch();
 
+
             }
         });
 
@@ -115,6 +121,7 @@ public class TeaLoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(TeaLoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                pd.hide();
             }
         });
     }
@@ -140,6 +147,7 @@ public class TeaLoginActivity extends AppCompatActivity {
                     {
                         Toast.makeText(TeaLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
+                        pd.hide();
                     }
 
                 }

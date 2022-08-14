@@ -20,13 +20,19 @@
             android:name=".std_register"
             android:exported="false" />
         <activity
+            android:name=".TeaStudyDataList"
+            android:exported="false" />
+        <activity
+            android:name=".TeaStudentList"
+            android:exported="false" />
+        <activity
             android:name=".TeaDashActivity"
             android:exported="false" />
         <activity
             android:name=".TeaRegActivity"
             android:exported="false" />
         <activity
-            android:name=".StdStudyDataActivity"
+            android:name=".TeaStudyDataUpload"
             android:exported="false" />
         <activity
             android:name=".StdClassDaysActivity"
