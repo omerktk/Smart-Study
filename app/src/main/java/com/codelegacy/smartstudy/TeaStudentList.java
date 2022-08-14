@@ -21,7 +21,7 @@ public class TeaStudentList extends AppCompatActivity {
 
     DatabaseReference ref = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("parent");
 
-    ArrayList<JavaModal> data;
+    ArrayList<teacher_data> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class TeaStudentList extends AppCompatActivity {
     }
 
     public void fetch(){
-        data = new ArrayList<>();
+        data = new ArrayList<teacher_data>();
 
 //write data ref / then addvalue / then new space enter
 
@@ -40,8 +40,8 @@ public class TeaStudentList extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot firedata : dataSnapshot.getChildren()) {
-                    JavaModal s1 = firedata.getValue(JavaModal.class);
-                    data.add(s1);
+                    teacher_data s12 = firedata.getValue(teacher_data.class);
+                    data.add(s12);
                 }
                 com.codelegacy.smartstudy.TeaStudentAdapter f1 = new com.codelegacy.smartstudy.TeaStudentAdapter(data, TeaStudentList.this);
                 lv.setAdapter(f1);

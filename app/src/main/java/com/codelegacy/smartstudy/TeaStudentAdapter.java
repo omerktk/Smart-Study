@@ -19,13 +19,13 @@ public class TeaStudentAdapter extends BaseAdapter {
 
 
 
-    ArrayList<JavaModal> data;
+    ArrayList<teacher_data> data;
     Context context;
 
     String Sref = "gs://apptest-fed14.appspot.com/images";
 
     //alt insert to create contractor
-    public TeaStudentAdapter(ArrayList<JavaModal> data, Context context) {
+    public TeaStudentAdapter(ArrayList<teacher_data> data, Context context) {
         this.data = data;
         this.context = context;
 
@@ -56,13 +56,9 @@ public class TeaStudentAdapter extends BaseAdapter {
         ImageView pimage = root.findViewById(R.id.imageView23);
 
 
-      String imagename = "https://firebasestorage.googleapis.com/v0/b/apptest-fed14.appspot.com/o/images%2F"+data.get(position).pimage+"?alt=media";
+        pname.setText(data.get(position).t_name);
+        pdetails.setText(data.get(position).t_user);
 
-        pname.setText(data.get(position).pname);
-        pdetails.setText(data.get(position).pdetail);
-
-
-        Glide.with(this.context).load(imagename).into(pimage);
 
 
 
