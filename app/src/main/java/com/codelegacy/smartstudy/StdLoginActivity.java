@@ -84,7 +84,7 @@ public class StdLoginActivity extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
 
                 //  String uid = authResult.getUser().getUid();
-                fetch();
+                //fetch();
 
             }
         });

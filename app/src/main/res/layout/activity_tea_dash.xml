@@ -1,98 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#E9F0FB"
     tools:context=".TeaDashActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/signin"
-        android:text="Tea Dash"
-        android:textColor="#355C7D"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        android:layout_margin="50dp"
-        android:gravity="center"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardgif"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="-10dp"
+            android:scaleType="fitXY" >
+            <ImageView
+                android:id="@+id/gif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/sdata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/signin"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="38dp"
-        android:textColor="@color/white"
-        android:backgroundTint="#355C7D"
-        android:background="@drawable/rounde_btn"
-        android:text="Study data" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teacher Dashboard"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="50dp"
+                android:textStyle="bold|italic"
+                android:textColor="#fff"
+                />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/upsdata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sdata"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="38dp"
-        android:background="@drawable/rounde_btn"
-        android:backgroundTint="#355C7D"
-        android:text="Upload Study Data"
-        android:textColor="@color/white" />
+        </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mystd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/upsdata"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="38dp"
-        android:background="@drawable/rounde_btn"
-        android:backgroundTint="#355C7D"
-        android:text="my Student"
-        android:textColor="@color/white" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/regstd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mystd"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="38dp"
-        android:textColor="@color/white"
-        android:backgroundTint="#355C7D"
-        android:background="@drawable/rounde_btn"
-        android:text="Reg Student" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/namecard"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="50dp"
+            android:layout_marginTop="-50dp"
+            android:backgroundTint="#E9F0FB"
+            >
 
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/quit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:textSize="21sp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="38dp"
-        android:textColor="@color/white"
-        android:backgroundTint="#355C7D"
-        android:background="@drawable/rounde_btn"
-        android:text="Logout" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sir Muhammad omer"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                android:textColor="#0D0F35"
+                android:layout_marginTop="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/sdata"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:backgroundTint="#B4C5E5"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/stdy_data" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="Study Material"
+                            android:textColor="#000"
+                            android:textSize="25dp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/upsdata"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:backgroundTint="#B4C5E5"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/add_material" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="Add Study Material"
+                            android:textColor="#000"
+                            android:textSize="25dp" />
+                    </com.google.android.material.card.MaterialCardView>
 
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mystd"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#B4C5E5"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/stds" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="My Students"
+                            android:textColor="#000"
+                            android:textSize="27dp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/regstd"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:backgroundTint="#B4C5E5"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/admit" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="Admit Students"
+                            android:textColor="#000"
+                            android:textSize="25dp" />
+                    </com.google.android.material.card.MaterialCardView>
 
 
-</RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mark60"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#B4C5E5"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/marks" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="Student Marks"
+                            android:textColor="#000"
+                            android:textSize="27dp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/addmark60"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:backgroundTint="#B4C5E5"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="12dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/addmarks" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="80dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:text="Add Student Marks"
+                            android:textColor="#000"
+                            android:textSize="25dp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#E9F0FB"
+            android:backgroundTint="#E9F0FB"
+            android:foreground="#E9F0FB"
+            android:foregroundTint="#E9F0FB"
+            android:layout_marginTop="-50dp"
+            android:text="sf"/>
+
+    </LinearLayout>
+
+</ScrollView>

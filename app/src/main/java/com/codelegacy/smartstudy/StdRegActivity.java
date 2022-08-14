@@ -91,7 +91,7 @@ public class StdRegActivity extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(temail.getText().toString(),tpass.getText().toString()).addOnFailureListener(StdRegActivity.this, new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(StdRegActivity.this, "Reg Failed", Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -100,6 +100,7 @@ public class StdRegActivity extends AppCompatActivity {
         Student t_data = new Student(t_id,trolenum.getText().toString(),tname.getText().toString(),tage.getText().toString(),temail.getText().toString(),tpass.getText().toString());
         t_db.child(t_id).setValue(t_data);
         Toast.makeText(StdRegActivity.this, "Reg Done", Toast.LENGTH_LONG).show();
+        super.onBackPressed();
 
     }
 }
