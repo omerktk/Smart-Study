@@ -10,23 +10,16 @@
 
 
 
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
-
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
-
     <TextView
-        android:id="@+id/textView1"
+
+        android:layout_margin="20dp"
+        android:textStyle="bold"
         android:textColor="@color/white"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+
 
 
     <TextView
@@ -35,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+
     <TextView
         android:id="@+id/textView3"
         android:textColor="@color/white"

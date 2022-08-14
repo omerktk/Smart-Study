@@ -12,22 +12,24 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class TeaStudentAdapter extends BaseAdapter {
+public class TeaMarkAdapter extends BaseAdapter {
 
 
     //array with model
 
-    ArrayList<Student> data;
-    Context context;
-    public TeaStudentAdapter(ArrayList<Student> data, Context context) {
-        this.data = data;
-        this.context = context;
-    }
 
-    String Sref = "gs://apptest-fed14.appspot.com/images";
+
+    ArrayList<JavaModal> data;
+    Context context;
+
+
 
     //alt insert to create contractor
+    public TeaMarkAdapter(ArrayList<JavaModal> data, Context context) {
+        this.data = data;
+        this.context = context;
 
+    }
 
 
     @Override
@@ -47,17 +49,17 @@ public class TeaStudentAdapter extends BaseAdapter {
     //write in this
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View root = LayoutInflater.from(context).inflate(R.layout.teastudentlistview, null);
+        View root = LayoutInflater.from(context).inflate(R.layout.teamarklistview, null);
 
         TextView pname = root.findViewById(R.id.textView1);
         TextView pdetails = root.findViewById(R.id.textView2);
-        TextView text3 = root.findViewById(R.id.textView3);
+        TextView pimage = root.findViewById(R.id.textView3);
 
 
 
-        pname.setText(data.get(position).getStdname()+"");
-        pdetails.setText(data.get(position).getEnrollno()+"");
-        text3.setText(data.get(position).getSemail()+"");
+        pname.setText(data.get(position).pimage);
+        pdetails.setText(data.get(position).pname);
+        pimage.setText(data.get(position).pdetail);
 
 
 

@@ -22,7 +22,7 @@ public class TeaDashActivity extends AppCompatActivity {
         mystd = (MaterialButton) findViewById(R.id.mystd);
 
         regstd.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(),std_register.class));
+            startActivity(new Intent(getApplicationContext(),StdRegActivity.class));
         });
 
         sdata.setOnClickListener(view -> {

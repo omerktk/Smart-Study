@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,160 +8,170 @@
     android:background="#E9F0FB"
     android:orientation="vertical"
     >
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/tea_reg"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/namecard"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="50dp"
-        app:cardElevation="10dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         >
 
-        <TextView
-            android:layout_width="296dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:text="Full Name"
-            android:textColor="#0D0F35"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/t_name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="#FFF"
-            android:drawableLeft="@drawable/icon_mail"
-            android:drawablePadding="5dp"
-            android:ems="10"
-            android:hint=""
-            android:inputType="textPersonName"
-            android:paddingLeft="20dp"
-            android:paddingBottom="5dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </com.google.android.material.card.MaterialCardView>
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/emailcard"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="25dp"
-        app:cardElevation="10dp"
-        >
-
-        <TextView
-            android:layout_width="296dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:text="Email Address"
-            android:textColor="#0D0F35"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/t_user"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="#FFF"
-            android:drawableLeft="@drawable/icon_mail"
-            android:drawablePadding="5dp"
-            android:ems="10"
-            android:hint=""
-            android:inputType="textPersonName"
-            android:paddingLeft="20dp"
-            android:paddingBottom="5dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </com.google.android.material.card.MaterialCardView>
-
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/passwordcard"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="25dp"
-        app:cardElevation="10dp"
-        >
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Password"
-            android:textColor="#0D0F35"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:textStyle="bold"
-            android:textSize="15sp"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/tea_reg"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
             />
 
-        <EditText
-            android:id="@+id/t_pass"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/namecard"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="50dp"
+            app:cardElevation="10dp"
+            >
+
+            <TextView
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="Full Name"
+                android:textColor="#0D0F35"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/t_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#FFF"
+                android:drawableLeft="@drawable/icon_mail"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/emailcard"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="25dp"
+            app:cardElevation="10dp"
+            >
+
+            <TextView
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="Email Address"
+                android:textColor="#0D0F35"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/t_user"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#FFF"
+                android:drawableLeft="@drawable/icon_mail"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/passwordcard"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="25dp"
+            app:cardElevation="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Password"
+                android:textColor="#0D0F35"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+
+            <EditText
+                android:id="@+id/t_pass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#FFF"
+                android:drawableLeft="@drawable/lock"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint=""
+                android:inputType="textPassword"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/t_regbtn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:backgroundTint="#FFF"
-            android:drawableLeft="@drawable/lock"
-            android:drawablePadding="5dp"
-            android:ems="10"
-            android:hint=""
-            android:inputType="textPassword"
-            android:paddingLeft="20dp"
-            android:paddingBottom="5dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:cardCornerRadius="30dp"
+            android:background="#5B628F"
+            android:backgroundTint="#5B628F">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="REGISTER"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                ></TextView>
+        </com.google.android.material.card.MaterialCardView>
 
-    </com.google.android.material.card.MaterialCardView>
-
-
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/t_regbtn"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        app:cardCornerRadius="30dp"
-        android:background="#5B628F"
-        android:backgroundTint="#5B628F">
         <TextView
+            android:id="@+id/btn_reg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="REGISTER"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:layout_marginTop="15dp"
             android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            ></TextView>
-    </com.google.android.material.card.MaterialCardView>
+            android:textSize="13dp"
+            />
 
-    <TextView
-        android:id="@+id/btn_reg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Already have an account? Login"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:textSize="13dp"
-        />
+    </LinearLayout>
 
 
-</LinearLayout>
+
+
+
+
+</ScrollView>

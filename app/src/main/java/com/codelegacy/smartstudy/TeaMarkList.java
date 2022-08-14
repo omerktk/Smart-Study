@@ -14,21 +14,20 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class TeaStudentList extends AppCompatActivity {
+public class TeaMarkList extends AppCompatActivity {
 
 
     ListView lv;
 
-    DatabaseReference ref;
+    DatabaseReference ref = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("Marks");
 
-    ArrayList<Student> data;
+    ArrayList<JavaModal> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teastudentlist);
-        ref = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("student");
-        lv = findViewById(R.id.listalldata);
+        setContentView(R.layout.activity_teamarklist);
+        lv = (ListView) findViewById(R.id.listalldata);
         fetch();
     }
 
@@ -37,25 +36,26 @@ public class TeaStudentList extends AppCompatActivity {
 
 //write data ref / then addvalue / then new space enter
 
-        ref.addValueEventListener(new ValueEventListener() {
+        ValueEventListener valueEventListener = ref.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot firedata : snapshot.getChildren())
-                {
-                    Student s12 = firedata.getValue(Student.class);
-                    data.add(s12);
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot firedata : dataSnapshot.getChildren()) {
+                    JavaModal s1 = firedata.getValue(JavaModal.class);
+                    data.add(s1);
                 }
-                TeaStudentAdapter f1 = new TeaStudentAdapter(data, TeaStudentList.this);
+                TeaMarkAdapter f1 = new TeaMarkAdapter(data, TeaMarkList.this);
                 lv.setAdapter(f1);
             }
 
+
+
+
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
         });
-
-
 
 
     }
