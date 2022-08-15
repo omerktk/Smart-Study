@@ -2,6 +2,7 @@ package com.codelegacy.smartstudy;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class TeaStudyDataUpload extends AppCompatActivity {
     MaterialCardView btn;
     ProgressDialog pd;
+    EditText name;
+    EditText mail;
     DatabaseReference ref = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("StudyData");
 
 
@@ -38,11 +41,27 @@ public class TeaStudyDataUpload extends AppCompatActivity {
     private void uploadImage() {
         String maxid = System.currentTimeMillis()+"" ;
 
+        String susername = mail.getText().toString().trim();
+        String spassword = name.getText().toString().trim();
+
+        if (susername.isEmpty()){
+            mail.setError("Make sure to fill this field");
+            mail.requestFocus();
+            return;
+        }
+
+
+        if(spassword.isEmpty()){
+            name.setError("Field Is Empty");
+            name.requestFocus();
+            return;
+        }
+
             pd = new ProgressDialog(this);
             pd.setTitle("Uploading File...");
             pd.show();
-            EditText name = findViewById(R.id.username1);
-            EditText  mail = findViewById(R.id.password1);
+            name = findViewById(R.id.username1);
+            mail = findViewById(R.id.password1);
 
             //data
             JavaModal member = new JavaModal(name.getText().toString(),mail.getText().toString(), "null");

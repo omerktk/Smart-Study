@@ -3,6 +3,7 @@ package com.codelegacy.smartstudy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -30,6 +31,7 @@ public class ParLoginActivity extends AppCompatActivity {
     MaterialCardView p_login;
     String pusername,ppassword;
     TextView p_reg_red;
+    ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +88,9 @@ public class ParLoginActivity extends AppCompatActivity {
             p_password.requestFocus();
             return;
         }
+        pd = new ProgressDialog(this);
+        pd.setTitle("Please Wait...");
+        pd.show();
 
 
         mAuth.signInWithEmailAndPassword(pusername,ppassword).addOnSuccessListener(ParLoginActivity.this, new OnSuccessListener<AuthResult>() {
@@ -123,10 +128,9 @@ public class ParLoginActivity extends AppCompatActivity {
                     teacher_data s1 = firedata.getValue(teacher_data.class);
                     if(s1.t_user.equals(pusername))
                     {
-                        Toast.makeText(ParLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
+                        pd.hide();
                         startActivity(new Intent(getApplicationContext(),ParDashActivity.class));
-                    } else if(s1.t_user!=pusername){
-                        Toast.makeText(ParLoginActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                        finish();
                     }
 
                 }

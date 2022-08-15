@@ -1,7 +1,9 @@
 package com.codelegacy.smartstudy;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -60,6 +62,23 @@ public class TeaDashActivity extends AppCompatActivity {
         addmarks.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(),TeaMarkDataUpload.class));
         });
+
+    }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        moveTaskToBack(true);
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                        System.exit(1);
+                    }
+                }).create().show();
 
     }
 }

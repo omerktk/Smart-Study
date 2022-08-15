@@ -152,8 +152,9 @@ public class TeaLoginActivity extends AppCompatActivity {
                         SharedPreferences.Editor editor=sp.edit();
                         editor.putString("iname", s1.t_name.toString());
                         editor.commit();
-                        Toast.makeText(TeaLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
+
                         startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
+                        finish();
                         pd.hide();
                         t_user.setText("");
                         t_pass.setText("");

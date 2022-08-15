@@ -16,7 +16,8 @@ public class TeaMarkDataUpload extends AppCompatActivity {
     MaterialCardView btn;
     ProgressDialog pd;
     DatabaseReference ref = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("Marks");
-
+    EditText name;
+    EditText  mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +37,36 @@ public class TeaMarkDataUpload extends AppCompatActivity {
 
 
     private void uploadImage() {
-        String maxid = System.currentTimeMillis()+"" ;
+
+
+            String maxid = System.currentTimeMillis()+"" ;
+
+            String susername = mail.getText().toString().trim();
+            String spassword = name.getText().toString().trim();
+
+            if (susername.isEmpty()){
+                mail.setError("Make sure to fill this field");
+                mail.requestFocus();
+                return;
+            }
+
+
+            if(spassword.isEmpty()){
+                name.setError("Field Is Empty");
+                name.requestFocus();
+                return;
+            }
+        String maxid1 = System.currentTimeMillis()+"" ;
 
             pd = new ProgressDialog(this);
             pd.setTitle("Uploading File...");
             pd.show();
-            EditText name = findViewById(R.id.username);
-            EditText  mail = findViewById(R.id.marks);
+            name = findViewById(R.id.username);
+            mail = findViewById(R.id.marks);
         EditText  id = findViewById(R.id.rolenmbr);
             //data
-            JavaModal member = new JavaModal(name.getText().toString(),mail.getText().toString(), id.getText().toString());
-            ref.child(maxid).setValue(member);
+            JavaModal member = new JavaModal(name.getText().toString(),mail.getText().toString()+"%", id.getText().toString());
+            ref.child(maxid1).setValue(member);
         pd.hide();
         name.setText("");
         mail.setText("");

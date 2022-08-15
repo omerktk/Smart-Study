@@ -124,8 +124,9 @@ public class StdLoginActivity extends AppCompatActivity {
                     Student s1 = firedata.getValue(Student.class);
                     if(s1.semail.equals(susername))
                     {
-                        Toast.makeText(StdLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
+
                         startActivity(new Intent(getApplicationContext(),StdDashActivity.class));
+                        finish();
                         pd.hide();
                         s_user.setText("");
                         s_pass.setText("");

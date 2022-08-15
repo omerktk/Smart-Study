@@ -77,7 +77,7 @@
                 android:drawablePadding="5dp"
                 android:ems="10"
                 android:hint="Enter Roll No"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:paddingLeft="20dp"
                 android:paddingBottom="5dp"
                 tools:ignore="SpeakableTextPresentCheck" />
@@ -142,6 +142,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:inputType="number"
                 android:id="@+id/marks"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -151,7 +152,6 @@
                 android:drawablePadding="5dp"
                 android:ems="10"
                 android:hint="Enter Marks"
-                android:inputType="textPersonName"
                 android:paddingLeft="20dp"
                 android:paddingBottom="5dp"
                 tools:ignore="SpeakableTextPresentCheck" />

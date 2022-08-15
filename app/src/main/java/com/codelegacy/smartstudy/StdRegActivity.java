@@ -99,8 +99,12 @@ public class StdRegActivity extends AppCompatActivity {
         String t_id = System.currentTimeMillis()+"";
         Student t_data = new Student(t_id,trolenum.getText().toString(),tname.getText().toString(),tage.getText().toString(),temail.getText().toString(),tpass.getText().toString());
         t_db.child(t_id).setValue(t_data);
+        trolenum.setText("");
+        tname.setText("");
+        tage.setText("");
+        temail.setText("");
+        tpass.setText("");
         Toast.makeText(StdRegActivity.this, "Reg Done", Toast.LENGTH_LONG).show();
-        super.onBackPressed();
 
     }
 }
