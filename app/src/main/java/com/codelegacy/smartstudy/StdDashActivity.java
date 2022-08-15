@@ -3,8 +3,10 @@ package com.codelegacy.smartstudy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.button.MaterialButton;
@@ -13,16 +15,24 @@ import com.google.android.material.card.MaterialCardView;
 public class StdDashActivity extends AppCompatActivity {
     MaterialCardView btn,btn2;
     ImageView gif;
+    TextView mytext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_std_dash);
 
-        btn = (MaterialCardView) findViewById(R.id.cls);
-        btn2 = (MaterialCardView) findViewById(R.id.sdr);
         gif = findViewById(R.id.gif);
         Glide.with(StdDashActivity.this).load(getDrawable(R.drawable.cap)).into(gif);
+
+        btn = (MaterialCardView) findViewById(R.id.cls);
+        btn2 = (MaterialCardView) findViewById(R.id.sdr);
+        mytext = findViewById(R.id.mytext);
+
+        SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
+        String name = sp.getString("iname", "");
+        mytext.setText("welcome "+name);
+
         //class days
         btn.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(),TeaStudyDataList.class));

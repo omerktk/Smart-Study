@@ -132,6 +132,7 @@ public class StdLoginActivity extends AppCompatActivity {
                         SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
                         SharedPreferences.Editor editor=sp.edit();
                         editor.putString("uname", s1.enrollno.toString());
+                        editor.putString("iname", s1.stdname.toString());
                         editor.commit();
                     }
 

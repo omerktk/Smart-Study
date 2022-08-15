@@ -26,6 +26,7 @@ public class ParDashActivity extends AppCompatActivity {
         sbox = findViewById(R.id.xbox);
         xbtn = (MaterialCardView) findViewById(R.id.xbtn);
 
+
         xbtn.setOnClickListener(view -> {
             SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
             SharedPreferences.Editor editor=sp.edit();

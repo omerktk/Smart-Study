@@ -3,6 +3,7 @@ package com.codelegacy.smartstudy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -147,6 +148,10 @@ public class TeaLoginActivity extends AppCompatActivity {
                     teacher_data s1 = firedata.getValue(teacher_data.class);
                     if(s1.t_user.equals(suser))
                     {
+                        SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
+                        SharedPreferences.Editor editor=sp.edit();
+                        editor.putString("iname", s1.t_name.toString());
+                        editor.commit();
                         Toast.makeText(TeaLoginActivity.this, "Login Done", Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getApplicationContext(),TeaDashActivity.class));
                         pd.hide();

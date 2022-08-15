@@ -3,16 +3,20 @@ package com.codelegacy.smartstudy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import com.bumptech.glide.Glide;
 
 
 public class TeaDashActivity extends AppCompatActivity {
     ImageView gif;
     MaterialCardView regstd,upsdata,sdata,mystd,marks,addmarks;
+    TextView mytext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,11 @@ public class TeaDashActivity extends AppCompatActivity {
         mystd = (MaterialCardView) findViewById(R.id.mystd);
         marks = (MaterialCardView) findViewById(R.id.mark60);
         addmarks = (MaterialCardView) findViewById(R.id.addmark60);
+        mytext = findViewById(R.id.mytext);
+
+        SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
+        String name = sp.getString("iname", "");
+        mytext.setText("welcome "+name);
 
         gif = findViewById(R.id.gif);
         Glide.with(TeaDashActivity.this).load(getDrawable(R.drawable.cap)).into(gif);
