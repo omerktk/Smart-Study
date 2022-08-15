@@ -1,6 +1,7 @@
 package com.codelegacy.smartstudy;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -23,13 +24,19 @@ public class TeaStudentList extends AppCompatActivity {
 
     ArrayList<Student> data;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teastudentlist);
         ref = FirebaseDatabase.getInstance("https://smart-study-cdbd4-default-rtdb.firebaseio.com/").getReference("student");
         lv = findViewById(R.id.listalldata);
+
         fetch();
+
+
+
     }
 
     public void fetch(){

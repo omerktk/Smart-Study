@@ -1,94 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<androidx.cardview.widget.CardView
-    android:id="@+id/stdcard"
-    android:layout_width="400dp"
-    android:layout_height="110dp"
-    android:backgroundTint="#B4C5E5"
-    android:padding="15dp"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="15dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="30dp"
-    android:layout_gravity="center"
-    >
-    <!--        <ImageView-->
-    <!--            android:id="@+id/cardimg"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:scaleType="fitCenter"/>-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="20dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/stdcard"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#FFF"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
         >
+        <!--        <ImageView-->
+        <!--            android:id="@+id/cardimg"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:scaleType="fitCenter"/>-->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name:"
-                    android:layout_marginRight="10dp"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="#fff"
-                    />
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="021354"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="#fff"
-
-                    />
-            </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            >
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-                <TextView
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Name:"
+                        android:textColor="#0D0F35"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="021354"
+                        android:textColor="#0D0F35"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Link:"
-                    android:layout_marginRight="10dp"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="#fff"
+                    android:layout_marginTop="10dp">
 
-                    />
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Muhammad Omer ktk"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="#fff"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Link:"
+                        android:textColor="#0D0F35"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
 
-                    />
+                        />
 
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Muhammad Omer ktk"
+                        android:textColor="#0D0F35"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+
+                        />
+
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
+
         </LinearLayout>
 
-    </LinearLayout>
 
-
-
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
