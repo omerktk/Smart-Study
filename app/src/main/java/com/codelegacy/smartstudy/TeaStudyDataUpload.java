@@ -41,7 +41,7 @@ public class TeaStudyDataUpload extends AppCompatActivity {
     private void uploadImage() {
         String maxid = System.currentTimeMillis()+"" ;
 
-      
+
             pd = new ProgressDialog(this);
             pd.setTitle("Uploading File...");
             pd.show();
