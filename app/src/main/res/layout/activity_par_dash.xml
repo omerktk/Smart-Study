@@ -10,18 +10,7 @@
     tools:context=".ParDashActivity"
     android:orientation="vertical"
     >
-    <!--    <TextView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Parent Dashboard"-->
-    <!--        android:fontFamily="sans-serif-condensed"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:gravity="center"-->
-    <!--        android:textSize="50dp"-->
-    <!--        android:layout_marginTop="80dp"-->
-    <!--        android:textStyle="bold|italic"-->
-    <!--        android:textColor="#fff"-->
-    <!--        />-->
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardgif"
         android:layout_width="match_parent"
@@ -80,6 +69,7 @@
             app:cardElevation="20dp"
             >
             <EditText
+                android:id="@+id/xbox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#E9F0FB"
@@ -96,6 +86,7 @@
             android:backgroundTint="#0D0F35"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
+            android:id="@+id/xbtn"
             >
             <TextView
                 android:layout_width="match_parent"

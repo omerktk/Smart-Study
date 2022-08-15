@@ -46,7 +46,7 @@ public class TeaMarkList2 extends AppCompatActivity {
                     SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
                     String name = sp.getString("uname", "");
                     //Toast.makeText(TeaMarkList2.this, "Login Failed"+name+" "+s1.pdetail, Toast.LENGTH_LONG).show();
-                    if(s1.pimage.contains(name))
+                    if(s1.pimage.equals(name))
                     {
                         data.add(s1);
                     }
