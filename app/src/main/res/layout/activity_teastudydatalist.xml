@@ -7,7 +7,9 @@ android:layout_height="match_parent"
 tools:context=".TeaStudyDataList"
 android:orientation="vertical"
 android:layout_gravity="center"
-    android:background="@color/black">
+    android:backgroundTint="#E9F0FB"
+    android:background="#E9F0FB"
+    >
 
 
 
@@ -15,8 +17,8 @@ android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signin"
-        android:text="Explore"
-        android:textColor="@color/white"
+        android:text="Study Material"
+        android:textColor="#0D0F35"
         android:textSize="35dp"
         android:textStyle="bold"
         android:layout_margin="50dp"

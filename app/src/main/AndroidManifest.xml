@@ -23,6 +23,9 @@
             android:name=".TeaMarkList"
             android:exported="false" />
         <activity
+            android:name=".TeaMarkList2"
+            android:exported="false" />
+        <activity
             android:name=".TeaStudyDataList"
             android:exported="false" />
         <activity

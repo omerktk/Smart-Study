@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.EditText;
@@ -128,6 +129,10 @@ public class StdLoginActivity extends AppCompatActivity {
                         pd.hide();
                         s_user.setText("");
                         s_pass.setText("");
+                        SharedPreferences sp=getSharedPreferences("credentials",MODE_PRIVATE);
+                        SharedPreferences.Editor editor=sp.edit();
+                        editor.putString("uname", s1.enrollno.toString());
+                        editor.commit();
                     }
 
                 }

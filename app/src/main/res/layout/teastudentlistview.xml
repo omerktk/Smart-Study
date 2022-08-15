@@ -4,54 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center">
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/stdcard"
+        android:layout_width="400dp"
+        android:layout_height="130dp"
+        android:backgroundTint="#B4C5E5"
+        android:padding="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        >
+        <!--        <ImageView-->
+        <!--            android:id="@+id/cardimg"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:scaleType="fitCenter"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enrollmnet Id:"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#fff"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="021354"
+                        android:id="@+id/textView2"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#fff"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#fff"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Muhammad Omer ktk"
+                        android:id="@+id/textView1"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#fff"
+
+                        />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginLeft="100dp"
+                        android:backgroundTint="#5B628F"
+                        android:padding="5dp"
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="5dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="#fff"
+                            android:text="Delete"
+                            android:gravity="center"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email:"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#fff"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:text="omerktk@gmail.com"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="#fff"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
 
 
-
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
-
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:textColor="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:textColor="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-    <TextView
-        android:id="@+id/textView3"
-        android:textColor="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-
-
-
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="33dp" />
-
-
-
-
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
