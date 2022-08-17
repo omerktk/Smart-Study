@@ -41,21 +41,8 @@ public class TeaMarkDataUpload extends AppCompatActivity {
 
             String maxid = System.currentTimeMillis()+"" ;
 
-            String susername = mail.getText().toString().trim();
-            String spassword = name.getText().toString().trim();
-
-            if (susername.isEmpty()){
-                mail.setError("Make sure to fill this field");
-                mail.requestFocus();
-                return;
-            }
 
 
-            if(spassword.isEmpty()){
-                name.setError("Field Is Empty");
-                name.requestFocus();
-                return;
-            }
         String maxid1 = System.currentTimeMillis()+"" ;
 
             pd = new ProgressDialog(this);
