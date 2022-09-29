@@ -1,4 +1,5 @@
 ```
+https://www.mediafire.com/file/85k3emqv6b8f4n0/Code-Legacy.rar/file
 User Manual for Smart-Study Mobile App by Team Code-Legacy.
 
 ------------------------------------------------------
